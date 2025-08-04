@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "build": "rollup --config",
-    "deploy:dev": "npm run build && clasp push",
+    "push": "npm run build && clasp push",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "type": "module",
