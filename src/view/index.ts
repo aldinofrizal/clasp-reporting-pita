@@ -6,7 +6,7 @@ const spreadsheetInstance = SpreadSheetClient.getInstance();
 
 class SpreadsheetView {
   static printWeeklyReport(reports: IWeeklyReport[]): void {
-    let sheet = SpreadSheetClient.getSheet(WEEKLY_REPORT_SHEET_NAME);
+    let sheet = spreadsheetInstance.getSheetByName(WEEKLY_REPORT_SHEET_NAME);
     // If the sheet doesn't exist, create it
     if (!sheet) {
       sheet = spreadsheetInstance.insertSheet(WEEKLY_REPORT_SHEET_NAME);
@@ -64,7 +64,7 @@ class SpreadsheetView {
   }
 
   static printMonthlyReport(report: IMonthlyReport): void {
-    let sheet = SpreadSheetClient.getSheet(MONTHLY_REPORT_SHEET_NAME);
+    let sheet = spreadsheetInstance.getSheetByName(MONTHLY_REPORT_SHEET_NAME);
     // If the sheet doesn't exist, create it
     if (!sheet) {
       sheet = spreadsheetInstance.insertSheet(MONTHLY_REPORT_SHEET_NAME);

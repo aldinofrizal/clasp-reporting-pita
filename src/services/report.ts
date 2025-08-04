@@ -1,8 +1,8 @@
 import DrugModel, { IDrug } from "../model/drug";
 import SaleModel, { ISale } from "../model/sale";
-import { BASE_EMPLOYEE_SALARY, DAILY_EMPLOYEE_SALARY, doctors, EMPLOYEE_PA_PAING, employees, PAYMENT_METHOD, REPORT_MONTHLY_BASE_SALARY, weeklyDateConstraint } from "../constant";
+import {DAILY_EMPLOYEE_SALARY, doctors, EMPLOYEE_PA_PAING, employees, PAYMENT_METHOD, REPORT_MONTHLY_BASE_SALARY, weeklyDateConstraint } from "../constant";
 import ExpenseModel, { IExpense } from "../model/expense";
-import AbsenceModel, { IAbsence } from "../model/Absence";
+import AbsenceModel, { IAbsence } from "../model/absence";
 
 export interface ReportSource {
   sales: ISale[],
