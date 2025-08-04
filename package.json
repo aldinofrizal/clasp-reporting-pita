@@ -1,0 +1,51 @@
+{
+  "name": "clasp-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup --config",
+    "deploy:dev": "npm run build && clasp push",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "@babel/plugin-transform-runtime": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
+    "@babel/preset-typescript": "^7.21.4",
+    "@google/clasp": "^2.4.2",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@types/google-apps-script": "^1.0.60",
+    "@types/node": "^22.7.7",
+    "@typescript-eslint/eslint-plugin": "^7.1.0",
+    "cross-env": "^7.0.3",
+    "rollup": "^4.9.2",
+    "typescript": "^5.0.4"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ],
+      "@babel/preset-typescript"
+    ],
+    "plugins": [
+      [
+        "@babel/plugin-transform-runtime",
+        {
+          "regenerator": true
+        }
+      ]
+    ]
+  }
+}
